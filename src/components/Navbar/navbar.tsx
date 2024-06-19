@@ -3,20 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Dropdown } from "flowbite-react";
-const components: {title: string; href: string}[] = [
-  {
-    title: "Membership Benefits",
-    href: '#',
-  },
-  {
-    title: "Membership Benefits",
-    href: '#',
-  },
-  {
-    title: "Membership Benefits",
-    href: '#',
-  },
-]
 export default function Navbar() {
   return (
     <nav className="w-full h-32 p-9 shadow bg-white md:flex md:items-center md:justify-between">
@@ -27,23 +13,23 @@ export default function Navbar() {
        </div>
        <ul className="flex gap-5 items-center">
         <li>
-          <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">HOME</a>
+          <a href="/" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">HOME</a>
         </li>
         <li>
-          <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">ABOUT US</a>
+          <a href="/AboutUs" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">ABOUT US</a>
         </li>
         <li className=" font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black ">
-          <Dropdown label="MEMBERSHIP" className="" inline>
-            <Dropdown.Item href="#">Membership Benefits</Dropdown.Item>
-            <Dropdown.Item href="#">Membership Process</Dropdown.Item>
-            <Dropdown.Item href="#">Membership Registration</Dropdown.Item>
+          <Dropdown label="MEMBERSHIP" inline>
+            <Dropdown.Item href="/Membership/Benefits">Membership Benefits</Dropdown.Item>
+            <Dropdown.Item href="/Membership/Process">Membership Process</Dropdown.Item>
+            <Dropdown.Item href="/Membership/Registration">Membership Registration</Dropdown.Item>
           </Dropdown>
         </li>
         <li>
-          <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">NEWS & EVENTS</a>
+          <a href="/News&Events" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">NEWS & EVENTS</a>
         </li>
         <li>
-          <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</a>
+          <a href="/Contact" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</a>
         </li>
         <div className="ml-4">
           <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
