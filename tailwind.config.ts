@@ -10,6 +10,9 @@ const config = {
 	],
   prefix: "",
   theme: {
+    fontFamily: {
+      'moul': ['Moul'],
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -76,7 +79,8 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"), 
-    require("daisyui")
+    require("daisyui"),
+    require('flowbite/plugin'),
   ],
 } satisfies Config
 

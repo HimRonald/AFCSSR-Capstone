@@ -1,8 +1,36 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
 
-  @layer base {
+@layer components{
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+  }
+  
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#027AC6, #027AC6)
+  }
+  
+  .link-underline:hover {
+    background-size: 100% 2px;
+    background-position: 0 100%
+  }
+}
+.moul-regular {
+  font-family: "Moul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+  /* @layer base {
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
@@ -73,4 +101,4 @@
     body {
       @apply bg-background text-foreground;
     }
-  }
+  } */
