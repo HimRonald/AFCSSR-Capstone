@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { NavigationMenu,NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink  } from "@radix-ui/react-navigation-menu";
+import { Dropdown } from "flowbite-react";
 const components: {title: string; href: string}[] = [
   {
     title: "Membership Benefits",
@@ -19,7 +19,7 @@ const components: {title: string; href: string}[] = [
 ]
 export default function Navbar() {
   return (
-    <nav className="w-full h-32 p-5 shadow bg-white md:flex md:items-center md:justify-between">
+    <nav className="w-full h-32 p-9 shadow bg-white md:flex md:items-center md:justify-between">
       <div className="flex items-center gap-5">
            <Image src="/Images/afcssr-logo.svg" alt="logo" width={97} height={97} />
            <div className=" w-[2px] h-[80px] bg-[#027AC6]"></div>
@@ -32,8 +32,12 @@ export default function Navbar() {
         <li>
           <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">ABOUT US</a>
         </li>
-        <li>
-          <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">MEMEBERSHIP</a>
+        <li className=" font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black ">
+          <Dropdown label="MEMBERSHIP" className="" inline>
+            <Dropdown.Item href="#">Membership Benefits</Dropdown.Item>
+            <Dropdown.Item href="#">Membership Process</Dropdown.Item>
+            <Dropdown.Item href="#">Membership Registration</Dropdown.Item>
+          </Dropdown>
         </li>
         <li>
           <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">NEWS & EVENTS</a>
@@ -41,7 +45,7 @@ export default function Navbar() {
         <li>
           <a href="#" className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</a>
         </li>
-        <div className="">
+        <div className="ml-4">
           <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
         </div>
       </ul>
