@@ -10,7 +10,7 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/component
 import { ChevronDown, MenuIcon } from "lucide-react";
 export default function Navbar() {
   return (
-    <header className="border-b bg-white">
+    <header className="border-b bg-white fixed top-0 w-full z-10">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between md:px-6">
         <Link href='/' className="flex items-center gap-5">
             <Image src="/Images/afcssr-logo.svg" alt="logo" width={97} height={97} />
@@ -43,7 +43,7 @@ export default function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href='/News&Events' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">NEWS & EVENTS</Link>
-          <Link href='Contact' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</Link>
+          <Link href='/Contact' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</Link>
           <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
         </nav>
         <Sheet>
