@@ -13,6 +13,7 @@ const config = {
   theme: {
     fontFamily: {
       'moul': ['Moul'],
+      'libre': ['Libre Baskerville'],
     },
     container: {
       center: true,
