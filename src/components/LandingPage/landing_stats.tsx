@@ -19,17 +19,17 @@ export default function LandingStats(){
                 <div className="flex gap-24 font-libre">
                     <div className="flex flex-col items-center text-[#027AC6]">
                         <Image alt="Alumni" src='/Images/Alumni.svg' width={140} height={140} className="mb-8"/>
-                        <span className="text-5xl"><CountUp from={0} to={1500} />+</span>
+                        <span className="text-5xl"><CountUp from={0} to={1500} /> +</span>
                         <span className="text-xl font-medium">Alumni</span>
                     </div>
                     <div className="flex flex-col items-center text-[#027AC6]">
                         <Image alt="Memeber" src='/Images/Members.svg' width={140} height={140} className="mb-8" />
-                        <span className="text-5xl"><CountUp from={0} to={500} />+</span>
+                        <span className="text-5xl"><CountUp from={0} to={500} /> +</span>
                         <span className="text-xl font-medium">Members</span>
                     </div>
                     <div className="flex flex-col items-center text-[#027AC6]">
                         <Image alt="Events" src='/Images/Events.svg' width={140} height={140} className="mb-8" />
-                        <span className="text-5xl"><CountUp from={0} to={10} />+</span>
+                        <span className="text-5xl"><CountUp from={0} to={10} /> +</span>
                         <span className="text-xl font-medium">Events</span>
                     </div>
                     <div className="flex flex-col items-center text-[#027AC6]">

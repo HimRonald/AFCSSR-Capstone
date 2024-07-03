@@ -27,7 +27,7 @@ export default function Navbar() {
             <DropdownMenuContent>
               <DropdownMenuItem>
                 <Link href="/Membership/Benefits" prefetch={false}>
-                  Memebership Benefits
+                  Membership Benefits
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
