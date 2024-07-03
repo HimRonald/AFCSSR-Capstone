@@ -1,5 +1,8 @@
+import { AboutUsFirst } from "./aboutUs_first"
 export default function Page(){
     return(
-        <div>About Us page</div>
+        <>
+        <AboutUsFirst />
+        </>
     )
 }
