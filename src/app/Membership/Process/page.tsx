@@ -86,7 +86,7 @@ export default function Page(){
             <div className="ml-[160px] mt-[50px]">
                 <span className="font-bold text-[24px] text-[#027AC6]">Step 4:</span> <br />
             </div>
-            <div className="mx-[160px] mt-[25px]">
+            <div className="m-[160px] mt-[25px]">
                 <span className="text-[18px]">Once your application and payment receipt have been submitted, our team will review your submission to ensure everything is in order. This approval process typically takes a few business days. You will receive a confirmation email once your membership is officially approved. This email will include your unique membership ID and instructions on how to access the members-only portal. From there, you can start enjoying all the benefits and opportunities that come with being a member of our association.</span>
             </div>
         </div>
