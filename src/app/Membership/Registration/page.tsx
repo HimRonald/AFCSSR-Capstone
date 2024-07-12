@@ -17,7 +17,7 @@ const [employmentType, setEmploymentType] = useState('');
 
             <div>
                 <div className="w-[1197px] h-[477px] mx-[100px] mt-[40px]">
-                    <span className="font-semibold text-[#027AC6] text-[20px]">Personal Information</span>
+                    <span className="font-semibold font-libre text-[#027AC6] text-[20px]">Personal Information</span>
                     <div className="mx-auto mt-[25px] flex justify-center">
                         <div className="flex flex-col">
                             <label htmlFor="" className="font-semibold">First Name <span className="text-red-500">*</span></label>
@@ -151,10 +151,15 @@ const [employmentType, setEmploymentType] = useState('');
                     </div>
                 </div>
 
-                <div className="w-[1197px] h-[201px] mx-[100px] mt-[90px]">
+                <div className="w-full h-full mx-[100px] mt-[90px]">
                     <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Bussiness Information (Optional)</span>
-                    <button id="addBussiness" type="button" className="w-[1198px] h-[75px] bg-[#027AC6] mt-[15px] mx-[21px] rounded-xl">
-                        <span className="font-semibold text-white">Add</span>
+                    <div className="w-[1198px] h-[511px] mt-[25px] flex border-x-2 border-y-2 rounded-xl">
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <button id="addBussiness" type="button" className="w-[1198px] h-[75px] bg-[#027AC6] my-[15px] mx-[21px] rounded-xl">
+                        <span className="font-semibold text-white">Add +</span>
                     </button>
                 </div>
             </div>

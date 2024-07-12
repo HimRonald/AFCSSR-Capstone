@@ -109,7 +109,7 @@ export default function Page(){
                     </div>
                 </div>
 
-                <div className="w-[1280px] h-[595px] mx-[80px] mt-[16px] border-x-2 border-y-2 rounded-xl flex">
+                <div className="w-[1280px] h-[595px] m-[80px] mt-[16px] border-x-2 border-y-2 rounded-xl flex">
                     <div className="w-[317px] h-[211.07px] mx-[50px] mt-[50px]">
                         <span className="mt-[14px] font-bold text-[16px] flex justify-center">Services and Discounts</span>
                         <ul className="mt-[48px]">
