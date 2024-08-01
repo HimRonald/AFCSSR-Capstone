@@ -1,13 +1,12 @@
 import React from "react"
 import Image from "next/image";
 import { text } from "stream/consumers";
+import TitleBar from "@/components/ui/title_bar";
 
 export default function Page(){
     return(
         <div className="">
-            <div className="w-full h-32 bg-[#027AC6] justify-center flex flex-col items-center">
-                 <span className="text-[40px] text-white font-libre font-semibold">Membership</span>
-            </div>
+            <TitleBar title_bar="Membership" />
             <div className="mx-[79px] mt-[50px]">
              <span className="font-libre font-bold text-[28px]">MEMBERSHIPS BENEFITS </span> <br />
              <span>As a member of the Association of Former Cambodian Students from the Soviet Union and Russia, you will gain access to a host of exclusive benefits designed to enrich your professional and personal life:</span>
@@ -18,7 +17,6 @@ export default function Page(){
                         <img src="/Images/NetworkingSVG.png" alt="" className="w-full h-[175.17px]" />
                         <span className="mt-[14px] font-bold text-[16px] flex justify-center">Network Opportunities</span>
                     </div>
-                    
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[29px] mt-[50px] space-y-[27px]">
                         <li className="flex items-center">
                             <img src="/Images/Vector.svg" alt="" className="mr-[25px]" />

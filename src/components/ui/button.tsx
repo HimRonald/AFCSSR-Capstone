@@ -20,8 +20,10 @@ const buttonVariants = cva(
         btn_landing:"bg-[#F9EB1E] text-[#027AC6] border-2 border-[#027AC6] font-bold",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 underline",
+        read_more: "text-[#4F4A5C]",
       },
       size: {
+        read_size: "p-0",
         size_nav:"rounded-xl px-5 py-4",
         size_landing:"rounded-xl py-5 px-7",
         default: "h-10 px-4 py-2",

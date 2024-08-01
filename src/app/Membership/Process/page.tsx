@@ -1,9 +1,8 @@
+import TitleBar from "@/components/ui/title_bar"
 export default function Page(){
     return (
         <div>
-            <div className="w-full h-32 bg-[#027AC6] justify-center flex flex-col items-center">
-                <span className="text-[40px] text-white font-libre font-semibold">Membership</span>
-            </div>
+            <TitleBar title_bar="Membership" />
             <div className="mx-[79px] mt-[50px]">
                 <span className="font-libre font-bold text-[28px]">MEMBERSHIPS PROCESS</span>
             </div>
