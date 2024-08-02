@@ -265,25 +265,18 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                         <div className="h-[342] mt-[25px] flex">
                             <div className="ml-[50px]">
                                 <button>
-                                    <div {...getRootProps()} style={{ position: 'relative',}}>
+                                    <div className="flex" {...getRootProps()} style={{ position: 'relative',}}>
                                         <input accept="image/png, image/jpg, image/svg," {...getInputProps()} />
                                         <img 
                                             src={'/Images/Upload Field.png'} 
-                                            style={{
-                                                width: '100%', 
-                                                height: '100%'
-                                            }}
-                                        />                                       
+                                        />
+                                         {isDragActive && (
+                                            <div className="absolute inset-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center">
+                                                <p>Drop the file here...</p>
+                                            </div>
+                                        )}                                       
                                         {preview && (
-                                            <img 
-                                                src={preview as string} 
-                                                style={{
-                                                    position: 'absolute',
-                                                    width: '100%', 
-                                                    height: '100%', 
-                                                    objectFit: 'cover',
-                                                }} 
-                                            />
+                                            <img className="absolute w-full h-full object-cover" src={preview as string} />
                                         )}                   
                                     </div>          
                                 </button>
@@ -297,6 +290,9 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                         </div>
                     </div>
                 </div>
+                <button type="button" className="w-[1198px] h-[75px] bg-[#027AC6] my-[15px] mx-[80px] flex flex-col justify-center items-center rounded-xl">
+                    <span className="font-semibold text-white">Submit</span> 
+                </button>
             </div>
         </div>
     )
