@@ -2,7 +2,7 @@ import TitleBar from "@/components/ui/title_bar"
 export default function Page(){
     return (
         <div>
-            <TitleBar title_bar="Membership" />
+            <TitleBar title_bar="ACFSSR Membership" />
             <div className="mx-[79px] mt-[50px]">
                 <span className="font-libre font-bold text-[28px]">MEMBERSHIPS PROCESS</span>
             </div>

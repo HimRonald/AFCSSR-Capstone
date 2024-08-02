@@ -5,7 +5,7 @@ import { Button } from "../ui/button"
 
 export default function MainCard(){
     return(
-        <div className="my-16 mx-auto container">
+        <div className="my-16">
             <div className="grid justify-center lg:grid-cols-2 gap-5">
                 <div>
                     <img src="/Images/newsPic.png" alt="" className="object-cover rounded-xl " />
@@ -21,7 +21,7 @@ export default function MainCard(){
                     </div>
                     <div className="flex justify-end mt-5">
                     <Button variant='read_more' size='read_size' className="flex-end gap-3" asChild>
-                        <Link href='#'>Read More <ChevronRightCircle/> </Link>
+                        <Link href='#'>Read More <ChevronRightCircle/></Link>
                     </Button>
                     </div>
                 </div>
