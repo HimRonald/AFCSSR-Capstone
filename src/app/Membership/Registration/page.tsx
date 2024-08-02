@@ -1,14 +1,34 @@
-"use client"
-import React, { useState } from "react";
-import { Dropdown } from "flowbite-react";
-import { Button } from "@/components/ui/button";
+"use client";
+
+import React, { useState, useCallback } from "react";
+import {useDropzone} from 'react-dropzone'
 
 export default function Page(){
 const [employmentType, setEmploymentType] = useState('');
+const [addBusiness, setAddBusiness] = useState<number[]>([]);
 
+const handleAddBusinessButton = () => {
+    setAddBusiness([...addBusiness, addBusiness.length]);
+};
+
+const handleRemoveBusinessButton = (index: number) => {
+    setAddBusiness(addBusiness.filter((_, i) => i !== index));
+};
+
+const [preview, setPreview] = useState<string | ArrayBuffer | null>(null);
+
+const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: acceptedFiles => {
+      const file = acceptedFiles[0];
+      if (file) {
+        setPreview(URL.createObjectURL(file));
+      }
+    },
+  });
+  
     return(
         <div>
-            <div className="w-full h-32 bg-[#027AC6] justify-center flex flex-col items-center">
+            <div className="h-32 bg-[#027AC6] justify-center flex flex-col items-center">
                 <span className="text-[40px] text-white font-libre font-semibold">Membership</span>
             </div>
             <div className="mx-[79px] mt-[50px]">
@@ -151,16 +171,131 @@ const [employmentType, setEmploymentType] = useState('');
                     </div>
                 </div>
 
-                <div className="w-full h-full mx-[100px] mt-[90px]">
-                    <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Bussiness Information (Optional)</span>
-                    <div className="w-[1198px] h-[511px] mt-[25px] flex border-x-2 border-y-2 rounded-xl">
-                        <div>
-                            
+                <div className="flex flex-col justify-center w-full h-full mx-[100px] mt-[90px]">
+                    <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Bussiness Information (Optional)</span>      
+                    {addBusiness.map((panel, index) => (  
+                        <div key={index} className="w-[1198px] h-[511px] mt-[25px] flex flex-col border-x-2 border-y-2 rounded-xl">
+                            <button onClick={() =>handleRemoveBusinessButton(index)} className="cursor-pointer ml-auto mr-0">
+                                <img src="/Images/Minus Sign.svg" alt="" />
+                            </button>
+                            <div className="flex mt-[15px]">
+                                <div className="flex flex-col ml-[42px]">
+                                    <label htmlFor="" className="font-semibold">Business Name <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[338px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+    
+                                <div className="flex flex-col ml-[50px]">
+                                    <label htmlFor="" className="font-semibold">Position / Title <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[338px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+    
+                                <div className="flex flex-col ml-[50px]">
+                                    <label htmlFor="" className="font-semibold">Business Type / Industry <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[338px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+                            </div> 
+    
+                            <div className="flex mt-[25px]">
+                                <div className="flex flex-col ml-[42px]">
+                                    <label htmlFor="" className="font-semibold">Business Description <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[1114px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+                            </div>
+    
+                            <div className="flex mt-[25px]">
+                                <div className="flex flex-col ml-[42px]">
+                                    <label htmlFor="" className="font-semibold">Business Email <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[726px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+    
+                                <div className="flex flex-col ml-[50px]">
+                                    <label htmlFor="" className="font-semibold">Business Phone Number <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[338px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+                            </div>
+    
+                            <div className="flex mt-[25px]">
+                                <div className="flex flex-col ml-[42px]">
+                                    <label htmlFor="" className="font-semibold">Business Address <span className="text-red-500">*</span></label>
+                                    <input type="text" className="w-[1114px] h-[56px] rounded-xl mt-[7px]" />
+                                </div>
+                            </div>
+                        </div>                         
+                    ))}
+                    <button onClick={handleAddBusinessButton} id="addBusiness" type="button" className="w-[1198px] h-[75px] bg-[#027AC6] my-[15px] mx-[21px] flex flex-col justify-center items-center rounded-xl">
+                        <span className="font-semibold text-white">Add +</span> 
+                    </button>
+                </div>
+
+                <div className="flex flex-col justify-center w-full h-full mx-[100px] mt-[25px]">
+                    <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Payment Information</span>
+                    <div className="h-[784px]">
+                        <div className="w-[1115] h-[342] mt-[25px] flex">
+                            <div className="ml-[50px]">
+                                <img src="/Images/IMG_5308 1.png" alt="" />
+                            </div>
+
+                            <div className="ml-[100px]">
+                                <div className="mt-[70px] mb-[21px]">
+                                    <span className="">
+                                        Make a payment for the annual membership fee of <span className="text-[#027AC6] font-semibold">30USD</span> through KHQR or our account information 
+                                    </span>
+                                </div>
+
+                                <div className="mb-[21px]">
+                                    <span>
+                                        Bank Name : ACLEDA
+                                    </span>
+                                </div>
+
+                                <div className="mb-[21px]">
+                                    <span>
+                                        Bank Account Number :
+                                    </span>
+                                </div>
+
+                                <div className="mb-[21px]">
+                                    <span>
+                                        Bank Account Holder :
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="h-[342] mt-[25px] flex">
+                            <div className="ml-[50px]">
+                                <button>
+                                    <div {...getRootProps()} style={{ position: 'relative',}}>
+                                        <input accept="image/png, image/jpg, image/svg," {...getInputProps()} />
+                                        <img 
+                                            src={'/Images/Upload Field.png'} 
+                                            style={{
+                                                width: '100%', 
+                                                height: '100%'
+                                            }}
+                                        />                                       
+                                        {preview && (
+                                            <img 
+                                                src={preview as string} 
+                                                style={{
+                                                    position: 'absolute',
+                                                    width: '100%', 
+                                                    height: '100%', 
+                                                    objectFit: 'cover',
+                                                }} 
+                                            />
+                                        )}                   
+                                    </div>          
+                                </button>
+                            </div>
+
+                            <div className="ml-[100px] mt-[144px]">
+                                <span>
+                                    Once you have made the payment, take a screenshot of the transaction and upload it here
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <button id="addBussiness" type="button" className="w-[1198px] h-[75px] bg-[#027AC6] my-[15px] mx-[21px] rounded-xl">
-                        <span className="font-semibold text-white">Add +</span>
-                    </button>
                 </div>
             </div>
         </div>
