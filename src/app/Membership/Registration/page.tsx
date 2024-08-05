@@ -28,14 +28,14 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
   
     return(
         <div>
-            <div className="h-32 bg-[#027AC6] justify-center flex flex-col items-center">
+            <div className="h-32 w-full bg-[#027AC6] justify-center flex flex-col items-center">
                 <span className="text-[40px] text-white font-libre font-semibold">Membership</span>
             </div>
-            <div className="mx-[79px] mt-[50px]">
-                <span className="font-libre font-bold text-[28px]">MEMBERSHIPS REGISTRATION</span>
-            </div>
 
-            <div>
+            <div className="mx-auto container">
+                <div className="mx-[79px] mt-[50px]">
+                    <span className="font-libre font-bold text-[28px]">MEMBERSHIPS REGISTRATION</span>
+                </div>
                 <div className="w-[1197px] h-[477px] mx-[100px] mt-[40px]">
                     <span className="font-semibold font-libre text-[#027AC6] text-[20px]">Personal Information</span>
                     <div className="mx-auto mt-[25px] flex justify-center">
@@ -171,7 +171,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center w-full h-full mx-[100px] mt-[90px]">
+                <div className="flex flex-col justify-center mx-[100px] mt-[90px]">
                     <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Bussiness Information (Optional)</span>      
                     {addBusiness.map((panel, index) => (  
                         <div key={index} className="w-[1198px] h-[511px] mt-[25px] flex flex-col border-x-2 border-y-2 rounded-xl">
@@ -227,10 +227,11 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                     </button>
                 </div>
 
-                <div className="flex flex-col justify-center w-full h-full mx-[100px] mt-[25px]">
+                <div className="flex flex-col justify-center mx-[100px] mt-[25px]">
                     <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Payment Information</span>
                     <div className="h-[784px]">
                         <div className="w-[1115] h-[342] mt-[25px] flex">
+                            
                             <div className="ml-[50px]">
                                 <img src="/Images/IMG_5308 1.png" alt="" />
                             </div>
@@ -290,6 +291,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                         </div>
                     </div>
                 </div>
+
                 <button type="button" className="w-[1198px] h-[75px] bg-[#027AC6] my-[15px] mx-[80px] flex flex-col justify-center items-center rounded-xl">
                     <span className="font-semibold text-white">Submit</span> 
                 </button>
