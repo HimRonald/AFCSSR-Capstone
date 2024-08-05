@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from "react";
 import {useDropzone} from 'react-dropzone'
 
+
 export default function Page(){
 const [employmentType, setEmploymentType] = useState('');
 const [addBusiness, setAddBusiness] = useState<number[]>([]);

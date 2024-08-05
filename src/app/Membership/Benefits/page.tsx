@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image";
 import { text } from "stream/consumers";
+import TitleBar from "@/components/ui/title_bar";
 
 export default function Page(){
     return(
@@ -18,7 +19,6 @@ export default function Page(){
                         <img src="/Images/NetworkingSVG.png" alt="" className="w-full h-[175.17px]" />
                         <span className="mt-[14px] font-bold text-[16px] flex justify-center">Network Opportunities</span>
                     </div>
-                    
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[29px] mt-[50px] space-y-[27px]">
                         <li className="flex items-center">
                             <img src="/Images/Vector.svg" alt="" className="mr-[25px]" />

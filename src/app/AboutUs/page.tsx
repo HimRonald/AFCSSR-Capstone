@@ -1,5 +1,12 @@
+import { AboutUsFirst } from "../../components/AboutUsPage/aboutUs_first"
+import AboutUsBackground from "@/components/AboutUsPage/aboutUs_background"
+import AboutUsMisVis from "@/components/AboutUsPage/aboutUs_MisVis"
 export default function Page(){
     return(
-        <div>About Us page</div>
+        <>
+        <AboutUsFirst />
+        <AboutUsBackground />
+        <AboutUsMisVis />
+        </>
     )
 }

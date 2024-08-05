@@ -1,3 +1,4 @@
+import TitleBar from "@/components/ui/title_bar"
 export default function Page(){
     return (
         <div>
