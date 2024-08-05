@@ -1,7 +1,7 @@
 import { Card } from "../ui/card"
 export default function AboutUsMisVis(){
     return(
-        <div className="container mx-auto grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="container mx-auto grid grid-cols-1 gap-3 md:grid-cols-2 py-10">
             <Card className="flex flex-col md:flex-row bg-[#027AC6] rounded-xl">
               <div className="md:w-1/2">
                 <img src="/Images/mission.png" alt="Mission" className="h-full w-full object-cover rounded-xl" />

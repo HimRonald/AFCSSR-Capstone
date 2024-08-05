@@ -1,6 +1,7 @@
 import TitleBar from "@/components/ui/title_bar"
 import MainCard from "@/components/News&Events/main_card"
 import NewsCardList from "@/components/News&Events/news_cardList"
+import EventsCard from "@/components/News&Events/events_card";
 export default function Page(){
     const newsCards = [
         {
@@ -55,6 +56,13 @@ export default function Page(){
             <h3 className="font-libre text-[#027AC6] text-4xl mb-8">Recent News</h3>
             <NewsCardList cards={newsCards}/>
         </div>
+        <TitleBar title_bar="ACFSSR EVENTS" />
+        <div className="bg-[#027AC6]">
+            <div className="mx-auto container px-10">
+            <EventsCard />
+        </div>
+        </div>
+        
         </>
     )
 }
