@@ -44,8 +44,8 @@ export default function Page(){
                 <span className="font-semibold my-10 font-libre text-[30px]">CONTACT US</span>
             </div>
             <div className="mx-auto container">
-                <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {users.slice(0, showMore ? users.length : 3).map((user, index) => (
+                <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {users.slice(0, showMore ? users.length : 4).map((user, index) => (
                         <UserCard key={index} name={user.name} title={user.title} image={user.image} />
                     ))}
                 </div>
@@ -60,37 +60,33 @@ export default function Page(){
             <div className="my-[25px] mx-auto container">
                 <span className="font-semibold my-10 font-libre text-[30px]">SEND MESSAGES</span>
             </div>
-            <div className="mx-auto container">
-                <div className="flex my-[25px]">
-                    <div className="flex flex-row">
-                        <div className="flex flex-col">
-                            <label htmlFor="" className="font-semibold">First Name </label>
-                            <input type="text" className="w-[610px] h-[56px] rounded-xl mt-[7px]" />
-                        </div>
+            <div className="md:p-0 p-5 md:mx-auto w-full max-w-screen-xl">
+                <div className="flex flex-wrap mx-auto justify-center">
+                    <div className="flex flex-col w-full md:w-[610px] pb-5 md:pb-0">
+                        <label htmlFor="" className="font-semibold">First Name </label>
+                        <input type="text" className="h-[56px] rounded-xl mt-[7px]" placeholder="Your Name" />
                     </div>
 
-                    <div>
-                        <div className="ml-[60px] flex flex-col">
-                            <label htmlFor="" className="font-semibold">Email </label>
-                            <input type="text" className="w-[610px] h-[56px] rounded-xl mt-[7px]" />
-                        </div>
+                    <div className="md:ml-[60px] flex flex-col w-full md:w-[610px] pb-5">
+                        <label htmlFor="" className="font-semibold">Email </label>
+                        <input type="text" className="h-[56px] rounded-xl mt-[7px]" placeholder="Your Email"/>
                     </div>
                 </div>
 
-                <div className="flex mb-[25px]">
-                    <div className="flex flex-row">
-                        <div className="flex flex-col">
+                <div className="mx-auto w-full max-w-screen-xl">
+                    <div className="flex flex-wrap mx-auto justify-center pb-5">
+                        <div className="flex flex-col w-full md:w-[1280px]">
                             <label htmlFor="" className="font-semibold">Subject </label>
-                            <input type="text" className="w-[1280px] h-[56px] rounded-xl mt-[7px]" />
+                            <input type="text" className="h-[56px] rounded-xl mt-[7px]" placeholder="Subject" />
                         </div>
                     </div>
                 </div>
 
-                <div className="flex mb-[25px]">
-                    <div className="flex flex-row">
-                        <div className="flex flex-col">
+                <div className="mx-auto w-full max-w-screen-xl">
+                    <div className="flex flex-wrap mx-auto justify-center">
+                        <div className="flex flex-col w-full md:w-[1280px]">
                             <label htmlFor="" className="font-semibold">Message </label>
-                            <input type="text" className="w-[1280px] h-[430px] rounded-xl mt-[7px]" />
+                            <textarea className="h-[430px] rounded-xl mt-[7px]" placeholder="Your Message"></textarea>
                         </div>
                     </div>
                 </div>
