@@ -125,9 +125,9 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                     </div>
                 </div>
 
-                <div className="w-full max-w-screen-xl mx-auto mt-[90px]">
+                <div className="w-full max-w-screen-xl mx-auto mt-[40px]">
                     <span className="font-semibold text-[#027AC6] text-[20px] font-libre">Professional Information</span>
-                    <div className="mt-[25px] lg:ml-[110px]">
+                    <div className="mt-[25px] lg:ml-[100px] mx-auto">
                         <div className="mx-auto flex flex-wrap">
                             <div className="flex flex-col w-full md:w-[338px]">
                                 <label htmlFor="employmentType" className="font-semibold">Type of Employment <span className="text-red-500">*</span></label>
@@ -144,7 +144,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                             </div>
 
                             {employmentType === 'public' &&(
-                                <div className="mx-auto flex flex-wrap">
+                                <div className="flex flex-wrap">
                                     <div className="flex flex-col md:w-[338px] w-full md:ml-[50px]">
                                         <label htmlFor="ministry" className="font-semibold">Ministry <span className="text-red-500">*</span></label>
                                         <input type="text" id="ministry" className="h-[56px] rounded-xl mt-[7px]"/>
@@ -157,7 +157,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                             )}
 
                             {employmentType === 'private' &&(
-                                <div className="mx-auto flex flex-wrap">
+                                <div className="flex flex-wrap">
                                     <div className="flex flex-col md:ml-[50px] w-full md:w-[338px]">
                                         <label htmlFor="company" className="font-semibold">Company / Organization <span className="text-red-500">*</span></label>
                                         <input type="text" id="company" className="h-[56px] rounded-xl mt-[7px]"/>
