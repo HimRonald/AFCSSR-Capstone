@@ -14,10 +14,10 @@ export default function Page(){
              <span>As a member of the Association of Former Cambodian Students from the Soviet Union and Russia, you will gain access to a host of exclusive benefits designed to enrich your professional and personal life:</span>
             </div>
             <div className="mx-auto container">
-                <div className="w-[1280px] h-[311px] mx-auto mt-[16px] border-x-2 border-y-2 rounded-xl flex">
+                <div className="md:w-[1280px] h-[311px] mx-auto mt-[16px] border-x-2 border-y-2 rounded-xl flex">
                     <div className="w-[317px] h-[211.07px] mx-[50px] mt-[50px]">
-                        <img src="/Images/NetworkingSVG.png" alt="" className="w-full h-[175.17px]" />
-                        <span className="mt-[14px] font-bold text-[16px] flex justify-center">Network Opportunities</span>
+                        <img src="/Images/NetworkingSVG.png" alt="" className="w-full h-[175.17px] object-contain" />
+                        <span className="mt-[14px] font-bold text-[16px] flex justify-center text-center">Network Opportunities</span>
                     </div>
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[29px] mt-[50px] space-y-[27px]">
                         <li className="flex items-center">
@@ -37,7 +37,7 @@ export default function Page(){
                     </ul>
                 </div>
 
-                <div className="w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
+                <div className="md:w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[50px] mt-[50px] space-y-[27px]">
                         <li className="flex items-center">
                             <img src="/Images/Vector.svg" alt="" className="mr-[25px]" />
@@ -56,15 +56,15 @@ export default function Page(){
                     </ul>
                     
                     <div className="w-[317px] h-[211.07px] mt-[50px] mr-[100px]">
-                        <img src="/Images/ProfessionalGrowth.svg" alt="" className="w-full h-[175.17px]" />
-                        <span className="mt-[14px] font-bold text-[16px] flex justify-center">Professional Development</span>
+                        <img src="/Images/ProfessionalGrowth.svg" alt="" className="w-full h-[175.17px] object-contain" />
+                        <span className="mt-[14px] font-bold text-[16px] flex justify-center text-center">Professional Development</span>
                     </div>
                 </div>
 
-                <div className="w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
+                <div className="md:w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
                     <div className="w-[317px] h-[211.07px] mx-[50px] mt-[50px]">
-                        <img src="/Images/SocialEvent.svg" alt="" className="w-full h-[175.17px]" />
-                        <span className="mt-[14px] font-bold text-[16px] flex justify-center">Cultural and Social Events</span>
+                        <img src="/Images/SocialEvent.svg" alt="" className="w-full h-[175.17px] object-contain" />
+                        <span className="mt-[14px] font-bold text-[16px] flex justify-center text-center">Cultural and Social Events</span>
                     </div>
                     
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[29px] mt-[50px] space-y-[27px]">
@@ -85,7 +85,7 @@ export default function Page(){
                     </ul>
                 </div>
 
-                <div className="w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
+                <div className="md:w-[1280px] h-[311px] mx-auto mt-[25px] border-x-2 border-y-2 rounded-xl flex">
                     <ul className="flex flex-col justify-center w-[834px] h-[211px] mx-[50px] mt-[50px] space-y-[27px]">
                         <li className="flex items-center">
                             <img src="/Images/Vector.svg" alt="" className="mr-[25px]" />
@@ -104,12 +104,12 @@ export default function Page(){
                     </ul>
                     
                     <div className="w-[317px] h-[211.07px] mt-[50px] mr-[100px]">
-                        <img src="/Images/CommunitySupport.svg" alt="" className="w-full h-[175.17px]" />
-                        <span className="mt-[14px] font-bold text-[16px] flex justify-center">Community Support</span>
+                        <img src="/Images/CommunitySupport.svg" alt="" className="w-full h-[175.17px] object-contain" />
+                        <span className="mt-[14px] font-bold text-[16px] flex justify-center text-center">Community Support</span>
                     </div>
                 </div>
 
-                <div className="w-[1280px] h-[595px] mx-auto mt-[16px] mb-[16px] border-x-2 border-y-2 rounded-xl flex flex-col">
+                <div className="md:w-[1280px] h-[595px] mx-auto mt-[16px] mb-[16px] border-x-2 border-y-2 rounded-xl flex flex-col">
                     <span className="font-semibold ml-[50px] mt-[50px]">Services and Discounts</span>
                     <div className="ml-[50px] mt-[50px] flex">
                         <div className="h-[201px]">
