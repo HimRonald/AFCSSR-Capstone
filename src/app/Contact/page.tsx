@@ -139,8 +139,8 @@ export default function Page() {
         </span>
       </div>
       <div className="mx-auto container">
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {users.slice(0, showMore ? users.length : 3).map((user, index) => (
+        <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {users.slice(0, showMore ? users.length : 4).map((user, index) => (
             <UserCard
               key={index}
               name={user.name}
