@@ -19,7 +19,7 @@ export default function FooterComponent(){
             <h3 className="font-bold mb-2">AFCSSR</h3>
             <Link href='/'>HOME</Link>
             <Link href='/AboutUs'>ABOUT US</Link>
-            <Link href='/Membership/Benefits'>MEMEBRSHIP</Link>
+            <Link href='/Membership/Benefits'>MEMBERSHIP</Link>
             <Link href='/News&Events'>NEWS & EVENTS</Link>
             <Link href='/Contact'>CONTACT US</Link>
           </div>
@@ -47,7 +47,7 @@ export default function FooterComponent(){
               <Link href='https://facebook.com'>
                 <Image src="/Images/Facebook Icon.svg" alt="facebook" width={30} height={30}/> 
               </Link>
-              <Link href='#'>
+              <Link href='https://t.me/afcssr'>
                 <Image src="/Images/Telegram Icon.svg" alt="telegram" width={30} height={30}/>
               </Link>
             </div>
