@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Moul } from "next/font/google";
 import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/navbar";
@@ -13,13 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "AFCSSR Capstone",
 };
-
-const libre = Libre_Baskerville({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  variable: "--font-libre",
-});
 
 export default function RootLayout({
   children,

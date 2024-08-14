@@ -1,9 +1,9 @@
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../config";
 
-const createEvent = async (data) => {
+const createNews = async (data) => {
   try {
-    const docRef = await addDoc(collection(db, "events"), {
+    const docRef = await addDoc(collection(db, "member_request"), {
       ...data,
       createdAt: serverTimestamp(),
     });
@@ -13,4 +13,4 @@ const createEvent = async (data) => {
   }
 };
 
-export default createEvent;
+export default createNews;
