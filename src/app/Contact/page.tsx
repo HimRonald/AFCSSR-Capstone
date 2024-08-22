@@ -165,7 +165,7 @@ export default function Page() {
       <div className="mx-auto container">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <div className="flex justify-between">
+            <div className="justify-between grid grid-cols-1 sm:grid-cols-2 gap-x-[70px]">
               {/* <div className="flex flex-row">
                 <div className="flex flex-col">
                   <label htmlFor="" className="font-semibold">

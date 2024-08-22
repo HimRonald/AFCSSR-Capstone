@@ -69,7 +69,7 @@ const FormSchema = z.object({
   businessTypes: z.array(z.string()),
 
   //payment info
-  payment: z.string(),
+  payment: z.string().min(1, "Please select payment status"),
   //   payment: z.string().min(1, "Please upload your payment receipt."),
 });
 
@@ -85,31 +85,6 @@ export default function RegisterMemberForm() {
 
   const handleRemoveBusinessButton = (index: number) => {
     setAddBusiness(addBusiness.filter((_, i) => i !== index));
-  };
-
-  const [preview, setPreview] = useState<string | ArrayBuffer | null>(null);
-
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop: (acceptedFiles) => {
-      const file = acceptedFiles[0];
-      if (file) {
-        setPreview(URL.createObjectURL(file));
-      }
-    },
-  });
-
-  const handleImageChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = event.target.files ? event.target.files[0] : null;
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImagePreview(reader.result as SetStateAction<null>);
-      };
-      reader.readAsDataURL(file);
-      setFile(file);
-    }
   };
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
@@ -176,7 +151,7 @@ export default function RegisterMemberForm() {
             <span className="font-semibold font-libre text-[#027AC6] text-[20px]">
               Personal Information
             </span>
-            <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="first_name"
@@ -192,7 +167,7 @@ export default function RegisterMemberForm() {
                         className="h-[56px] rounded-xl mt-[7px]"
                         onChange={(e) => {
                           field.onChange(e);
-                          //   handleChange("title", e.target.value);
+                          // handleChange("title", e.target.value);
                         }}
                       />
                     </FormControl>
@@ -256,7 +231,7 @@ export default function RegisterMemberForm() {
               />
             </div>
 
-            <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="gender"
@@ -332,7 +307,7 @@ export default function RegisterMemberForm() {
               />
             </div>
 
-            <div className="grid grid-cols-3 mx-12 justify-center">
+            <div className="grid grid-cols-1 gap-y-6 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="email"
@@ -359,7 +334,7 @@ export default function RegisterMemberForm() {
             <span className="font-semibold text-[#027AC6] text-[20px] font-libre">
               Education Information
             </span>
-            <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="university"
@@ -442,7 +417,7 @@ export default function RegisterMemberForm() {
               />
             </div>
 
-            <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="commencementDate"
@@ -645,7 +620,7 @@ export default function RegisterMemberForm() {
             <span className="font-semibold text-[#027AC6] text-[20px] font-libre">
               Professional Information
             </span>
-            <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
               <FormField
                 control={form.control}
                 name="sector"
@@ -745,7 +720,7 @@ export default function RegisterMemberForm() {
                 </button>
 
                 <div className="space-y-6 mt-6 mb-12">
-                  <div className="grid grid-cols-3 gap-x-12 mx-12 justify-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 mx-12 justify-center">
                     <FormField
                       control={form.control}
                       name={`business.${index}.name`}
@@ -784,7 +759,7 @@ export default function RegisterMemberForm() {
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e);
-                                //   handleChange("title", e.target.value);
+                                //handleChange("title", e.target.value);
                               }}
                             />
                           </FormControl>
@@ -841,7 +816,7 @@ export default function RegisterMemberForm() {
                       )}
                     />
                   </div>
-                  <div className="grid grid-cols-2 gap-x-12 mx-12 justify-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 mx-12 justify-center">
                     <FormField
                       control={form.control}
                       name={`business.${index}.phone`}
@@ -928,18 +903,18 @@ export default function RegisterMemberForm() {
             </Button>
           </div>
 
-          <div className="w-full flex flex-col justify-center my-10">
+          <div className="my-10">
             <span className="font-semibold text-[#027AC6] text-[20px] font-libre">
               Payment Information
             </span>
             <div>
-              <div className="w-full h-full mt-[25px] md:flex mx-auto container">
-                <div className="md:ml-[50px] ml-[100px] container">
+              <div className="w-full h-full mt-[25px] lg:flex grid grid-col-1 container justify-center">
+                <div className="mx-auto">
                   <img src="/Images/IMG_5308 1.png" alt="" />
                 </div>
 
-                <div className="md:ml-[100px]">
-                  <div className="md:mt-[70px] mt-5 mb-[21px]">
+                <div className="lg:ml-[100px]">
+                  <div className="lg:mt-[50px] mt-5 mb-[21px] lg:mr-[100px]">
                     <span>
                       Make a payment for the annual membership fee of
                       <span className="text-[#027AC6] font-semibold">
@@ -961,42 +936,43 @@ export default function RegisterMemberForm() {
                   <div className="mb-[21px]">
                     <span>Bank Account Holder :</span>
                   </div>
-                </div>
-              </div>
 
-              <div className="w-full h-full mt-[25px] md:flex mx-auto container">
-                <div className="md:ml-[50px] ml-[100px] container">
-                  <button>
-                    <div
-                      className="flex"
-                      {...getRootProps()}
-                      style={{ position: "relative" }}
-                    >
-                      <input
-                        accept="image/png, image/jpg, image/svg,"
-                        {...getInputProps()}
-                      />
-                      <img src={"/Images/Upload Field.png"} />
-                      {isDragActive && (
-                        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center">
-                          <p>Drop the file here...</p>
-                        </div>
-                      )}
-                      {preview && (
-                        <img
-                          className="absolute w-full h-full object-cover"
-                          src={preview as string}
-                        />
-                      )}
+                  <div className="flex items-center gap-x-[70px]">
+                    <div className="my-[35px]">
+                      <FormLabel className="font-semibold text-base my-auto">
+                       Payment Status
+                      </FormLabel> 
                     </div>
-                  </button>
-                </div>
 
-                <div className="md:ml-[100px] md:mt-[144px] mt-5">
-                  <span>
-                    Once you have made the payment, take a screenshot of the
-                    transaction and upload it here
-                  </span>
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="payment"
+                        render={({ field }) => (
+                          <FormItem>
+                            <Select 
+                              onValueChange={(value) => {
+                              field.onChange(value);
+                            }}
+                              defaultValue={field.value}
+                            >
+                              <FormControl>
+                                <SelectTrigger className="w-[210px] h-[56px] rounded-xl mt-[7px]">
+                                  <SelectValue placeholder="Select Status" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <FormMessage />
+                              <SelectContent>
+                                <SelectItem value="PayNow">I will pay now</SelectItem>
+                                <SelectItem value="PayLater">I will pay later</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </FormItem>
+                        )}                     
+                      />
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
