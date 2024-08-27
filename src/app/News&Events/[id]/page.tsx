@@ -140,7 +140,7 @@ export default function NewsDetail() {
           <img
             src={newsDetail.thumbnail}
             alt={newsDetail.title}
-            className="w-full h-64 object-cover rounded-xl mb-6"
+            className="w-full h-80 object-cover rounded-xl mb-6"
           />
           <Badge variant="news" className="mb-3">
             {date.toLocaleString()}

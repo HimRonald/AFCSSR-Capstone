@@ -8,9 +8,21 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
 import { ChevronDown, MenuIcon } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";;
+import { useState, useEffect } from "react";
 export default function Navbar() {
+  const router = useRouter();
+  const pathName = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
+  console.log("Current Pathname",pathName);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const isActive = (path: string) => isMounted && pathName === path;
+
   return (
-    <header className="border-b bg-white fixed top-0 w-full z-10">
+    <header className="drop-shadow-md bg-white fixed top-0 w-full z-10">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between md:px-6">
         <Link href='/' className="flex items-center gap-5">
             <Image src="/Images/afcssr-logo.svg" alt="logo" width={97} height={97} />
@@ -18,13 +30,13 @@ export default function Navbar() {
             <span className="text-[#027AC6] text-[15px] font-moul">សមាគមអតីតនិស្សិតកម្ពុជា<br />ពីសូវៀត និងរុស្សុី</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          <Link href='/' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">HOME</Link>
-          <Link href='/AboutUs' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">ABOUT US</Link>
+          <Link href='/' className={`font-semibold text-base ${isActive('/') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>HOME</Link>
+          <Link href='/AboutUs' className={`font-semibold text-base ${isActive('/AboutUs') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>ABOUT US</Link>
           <DropdownMenu>
-            <DropdownMenuTrigger className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">
+            <DropdownMenuTrigger className={`font-semibold text-base ${pathName.startsWith('/Membership') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'}  hover:text-[#027AC6] link-underline link-underline-black`}>
               MEMBERSHIP <ChevronDown className="inline-block h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="text-[#4F4A5C]">
               <DropdownMenuItem>
                 <Link href="/Membership/Benefits" prefetch={false}>
                   Membership Benefits
@@ -42,8 +54,8 @@ export default function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link href='/News&Events' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">NEWS & EVENTS</Link>
-          <Link href='/Contact' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] link-underline link-underline-black">CONTACT</Link>
+          <Link href='/News&Events' className={`font-semibold text-base ${isActive('/News&Events') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>NEWS & EVENTS</Link>
+          <Link href='/Contact' className={`font-semibold text-base ${isActive('/Contact') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>CONTACT</Link>
           <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
         </nav>
         <Sheet>
@@ -55,10 +67,10 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side='right' className="w-full max-w-xs bg-white">
             <div className="grid gap-4 p-4">
-            <Link href='/' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] hover:underline underline-offset-4">HOME</Link>
-            <Link href='/AboutUs' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] hover:underline underline-offset-4">ABOUT US</Link>
+            <Link href='/' className={`font-semibold text-base ${isActive('/') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>HOME</Link>
+            <Link href='/AboutUs' className={`font-semibold text-base ${isActive('/AboutUs') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>ABOUT US</Link>
             <Collapsible className="grid gap-2">
-                <CollapsibleTrigger className="flex items-center justify-between font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] hover:underline underline-offset-4">
+                <CollapsibleTrigger className={`flex items-center justify-between font-semibold text-base ${pathName.startsWith('/Membership') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>
                   MEMBERSHIP <ChevronDown className="h-4 w-4 transition-transform" />
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -75,8 +87,8 @@ export default function Navbar() {
                   </div>
                 </CollapsibleContent>
               </Collapsible>
-              <Link href='/News&Events' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] hover:underline underline-offset-4">NEWS & EVENTS</Link>
-              <Link href='/Contact' className="font-semibold text-base text-[#4F4A5C] hover:text-[#027AC6] hover:underline underline-offset-4">CONTACT</Link>
+              <Link href='/News&Events' className={`font-semibold text-base ${isActive('/News&Events') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>NEWS & EVENTS</Link>
+              <Link href='/Contact' className={`font-semibold text-base ${isActive('/Contact') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>CONTACT</Link>
               <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
             </div>
           </SheetContent>

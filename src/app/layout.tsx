@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Moul } from "next/font/google";
 import { Libre_Baskerville } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import Navbar from "@/components/Navbar/navbar";
 import FooterComponent from "@/components/Footer/footer";
@@ -9,9 +11,29 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const moul = localFont({
+  src:[
+    {
+      path:'../../public/Fonts/Moul-Regular.ttf',
+      weight: "400",
+    },
+  ],
+  variable: "--font-moul",
+});
+const libre = localFont({
+  src:[
+    {
+      path:'../../public/Fonts/LibreBaskerville-Regular.ttf',
+      weight: "400",
+    },
+  ],
+  variable: "--font-libre",
+});
+
 export const metadata: Metadata = {
-  title: "AFCSSR Capstone",
+  title: "AFCSSR Website",
 };
+
 
 export default function RootLayout({
   children,
@@ -19,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${moul.variable} ${libre.variable}`}>
       <body className={inter.className}>
         <ToastContainer
           position="top-left"

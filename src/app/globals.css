@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
+@layer components {
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+  }
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#027AC6, #027AC6)
+  }
+  
+  .link-underline:hover {
+    background-size: 100% 2px;
+    background-position: 0 100%
+  }
+}
+
+  /* :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -29,9 +47,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-  }
+  } */
 
-  .dark {
+  /* .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -56,8 +74,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
+  } */
+
 
 @layer base {
   * {
