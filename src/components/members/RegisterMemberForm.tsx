@@ -166,7 +166,7 @@ export default function RegisterMemberForm() {
                       <Input
                         {...field}
                         id="first_name"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="Mike"
                         onChange={(e) => {
                           field.onChange(e);
@@ -190,7 +190,7 @@ export default function RegisterMemberForm() {
                       <Input
                         {...field}
                         id="last_name"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="Tyson"
                         onChange={(e) => {
                           field.onChange(e);
@@ -218,7 +218,7 @@ export default function RegisterMemberForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px]">
+                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                           <SelectValue placeholder="Select Title" />
                         </SelectTrigger>
                       </FormControl>
@@ -252,7 +252,7 @@ export default function RegisterMemberForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px]">
+                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                           <SelectValue placeholder="Select Gender" />
                         </SelectTrigger>
                       </FormControl>
@@ -279,7 +279,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         type="date"
                         id="dateOfBirth"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                       />
                     </FormControl>
                     <FormMessage />
@@ -298,7 +298,7 @@ export default function RegisterMemberForm() {
                       <Input
                         {...field}
                         id="phone"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="023 880 880"
                         onChange={(e) => {
                           field.onChange(e);
@@ -325,7 +325,7 @@ export default function RegisterMemberForm() {
                       <Input
                         {...field}
                         id="email"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="miketyson168@gmail.com"
                       />
                     </FormControl>
@@ -353,7 +353,7 @@ export default function RegisterMemberForm() {
                       <Input
                         {...field}
                         id="university"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="Moscow State University"
                         onChange={(e) => {
                           field.onChange(e);
@@ -381,7 +381,7 @@ export default function RegisterMemberForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px]">
+                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                           <SelectValue placeholder="Select Qualification" />
                         </SelectTrigger>
                       </FormControl>
@@ -410,7 +410,7 @@ export default function RegisterMemberForm() {
                     <FormControl>
                       <Input
                         id="major"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         placeholder="Computer Science"
                         {...field}
                         onChange={(e) => {
@@ -438,7 +438,7 @@ export default function RegisterMemberForm() {
                       <Input
                         id="commencementDate"
                         type="date"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         {...field}
                         onChange={(e) => {
                           field.onChange(e);
@@ -462,7 +462,7 @@ export default function RegisterMemberForm() {
                       <Input
                         id="graduationDate"
                         type="date"
-                        className="h-[56px] rounded-xl mt-[7px]"
+                        className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                         {...field}
                         onChange={(e) => {
                           field.onChange(e);
@@ -490,7 +490,7 @@ export default function RegisterMemberForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px]">
+                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                           <SelectValue placeholder="Select Country" />
                         </SelectTrigger>
                       </FormControl>
@@ -646,7 +646,7 @@ export default function RegisterMemberForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px]">
+                        <SelectTrigger className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                           <SelectValue placeholder="Select Sector" />
                         </SelectTrigger>
                       </FormControl>
@@ -674,7 +674,7 @@ export default function RegisterMemberForm() {
                         <FormControl>
                           <Input
                             id="orgName"
-                            className="h-[56px] rounded-xl mt-[7px] border-[#CCC]"
+                            className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                             {...field}
                             onChange={(e) => {
                               field.onChange(e);
@@ -696,10 +696,11 @@ export default function RegisterMemberForm() {
                         </FormLabel>
                         <FormControl>
                           <FuzzySelectControl
+                            {...field}
                             control={control}
                             path="jobs"
                             name="occupation"
-                            className="h-[56px] rounded-xl mt-[7px]"
+                            className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                           />
                         </FormControl>
                         <FormMessage />
@@ -742,7 +743,7 @@ export default function RegisterMemberForm() {
                             <Input
                               {...field}
                               id="businessName"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               onChange={(e) => {
                                 field.onChange(e);
                                 //   handleChange("title", e.target.value);
@@ -764,7 +765,7 @@ export default function RegisterMemberForm() {
                           <FormControl>
                             <Input
                               id="businessTitle"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e);
@@ -787,7 +788,7 @@ export default function RegisterMemberForm() {
                           <FormControl>
                             <Input
                               id="businessType"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e);
@@ -813,7 +814,7 @@ export default function RegisterMemberForm() {
                             <Input
                               {...field}
                               id="businessDescription"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               onChange={(e) => {
                                 field.onChange(e);
                                 //   handleChange("title", e.target.value);
@@ -838,7 +839,7 @@ export default function RegisterMemberForm() {
                             <Input
                               {...field}
                               id="businessPhoneNumber"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               onChange={(e) => {
                                 field.onChange(e);
                                 //   handleChange("title", e.target.value);
@@ -860,7 +861,7 @@ export default function RegisterMemberForm() {
                           <FormControl>
                             <Input
                               id="businessEmail"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               {...field}
                               onChange={(e) => {
                                 field.onChange(e);
@@ -886,7 +887,7 @@ export default function RegisterMemberForm() {
                             <Input
                               {...field}
                               id="businessAddress"
-                              className="h-[56px] rounded-xl mt-[7px]"
+                              className="h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]"
                               onChange={(e) => {
                                 field.onChange(e);
                                 //   handleChange("title", e.target.value);
@@ -966,7 +967,7 @@ export default function RegisterMemberForm() {
                               defaultValue={field.value}
                             >
                               <FormControl>
-                                <SelectTrigger className="w-[210px] h-[56px] rounded-xl mt-[7px]">
+                                <SelectTrigger className="w-[210px] h-[56px] rounded-xl mt-[7px] hover:border-[#B3B3B3] border-[#CCC]">
                                   <SelectValue placeholder="Select Status" />
                                 </SelectTrigger>
                               </FormControl>
