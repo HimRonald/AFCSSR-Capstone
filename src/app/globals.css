@@ -67,3 +67,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.abc__control{
+  background: #ffffff !important;
+  height: 56px;
+  border-radius: 12px !important;
+  box-shadow:none !important;
+}
+.abc__input{
+  box-shadow:none !important;
+}

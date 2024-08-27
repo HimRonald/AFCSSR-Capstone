@@ -42,7 +42,7 @@ export default function Page() {
           </span>
         </div>
 
-        <RegisterMemberForm />
+        <RegisterMemberForm /> 
       </div>
     </div>
   );

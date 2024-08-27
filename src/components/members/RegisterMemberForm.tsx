@@ -23,13 +23,14 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Input, InputControl } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { FileInput } from "flowbite-react";
 
 import createMember from "@/firebase/firestore/members/createMember";
 import uploadImage from "@/firebase/storage/uploadImage";
 
 import { toast } from "react-toastify";
+import { FuzzySelectControl } from "../ui/customSelect";
 
 const FormSchema = z.object({
   //personal info
@@ -74,6 +75,7 @@ const FormSchema = z.object({
 });
 
 export default function RegisterMemberForm() {
+  const {control} = useForm();
   const [imagePreview, setImagePreview] = useState(null);
   const [file, setFile] = useState<File | null>(null);
   const [employmentType, setEmploymentType] = useState("");
@@ -165,6 +167,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         id="first_name"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="Mike"
                         onChange={(e) => {
                           field.onChange(e);
                           // handleChange("title", e.target.value);
@@ -188,6 +191,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         id="last_name"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="Tyson"
                         onChange={(e) => {
                           field.onChange(e);
                           //   handleChange("title", e.target.value);
@@ -295,6 +299,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         id="phone"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="023 880 880"
                         onChange={(e) => {
                           field.onChange(e);
                           //   handleChange("title", e.target.value);
@@ -321,6 +326,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         id="email"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="miketyson168@gmail.com"
                       />
                     </FormControl>
                     <FormMessage />
@@ -348,6 +354,7 @@ export default function RegisterMemberForm() {
                         {...field}
                         id="university"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="Moscow State University"
                         onChange={(e) => {
                           field.onChange(e);
                           //   handleChange("title", e.target.value);
@@ -404,6 +411,7 @@ export default function RegisterMemberForm() {
                       <Input
                         id="major"
                         className="h-[56px] rounded-xl mt-[7px]"
+                        placeholder="Computer Science"
                         {...field}
                         onChange={(e) => {
                           field.onChange(e);
@@ -666,7 +674,7 @@ export default function RegisterMemberForm() {
                         <FormControl>
                           <Input
                             id="orgName"
-                            className="h-[56px] rounded-xl mt-[7px]"
+                            className="h-[56px] rounded-xl mt-[7px] border-[#CCC]"
                             {...field}
                             onChange={(e) => {
                               field.onChange(e);
@@ -687,9 +695,10 @@ export default function RegisterMemberForm() {
                           Position
                         </FormLabel>
                         <FormControl>
-                          <Input
-                            {...field}
-                            id="occupation"
+                          <FuzzySelectControl
+                            control={control}
+                            path="jobs"
+                            name="occupation"
                             className="h-[56px] rounded-xl mt-[7px]"
                           />
                         </FormControl>
