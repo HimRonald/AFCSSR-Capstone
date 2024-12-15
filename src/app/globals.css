@@ -5,23 +5,25 @@
 @layer components {
   .link-underline {
     border-bottom-width: 0;
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
     background-size: 0 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size .5s ease-in-out;
+    transition: background-size 0.5s ease-in-out;
   }
   .link-underline-black {
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#027AC6, #027AC6)
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#027ac6, #027ac6);
   }
-  
+
   .link-underline:hover {
     background-size: 100% 2px;
-    background-position: 0 100%
+    background-position: 0 100%;
   }
 }
 
-  /* :root {
+/* :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -49,7 +51,7 @@
     --chart-5: 27 87% 67%;
   } */
 
-  /* .dark {
+/* .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -76,7 +78,6 @@
     --chart-5: 340 75% 55%;
   } */
 
-
 @layer base {
   * {
     @apply border-border;
@@ -84,4 +85,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.filled-btn:hover {
+  background-color: #fff;
+  border: 1px solid #027ac6;
+  color: #027ac6;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.outline-btn:hover {
+  background-color: #027ac6;
+  color: #fff;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.social-btn:hover {
+  background-color: #F4F4F5;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Moul } from "next/font/google";
-import { Libre_Baskerville } from "next/font/google";
 import localFont from 'next/font/local'
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar/navbar";
 import FooterComponent from "@/components/Footer/footer";
 
@@ -14,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 const moul = localFont({
   src:[
     {
-      path:'../../public/Fonts/Moul-Regular.ttf',
+      path:'../../../public/Fonts/Moul-Regular.ttf',
       weight: "400",
     },
   ],
@@ -23,7 +21,7 @@ const moul = localFont({
 const libre = localFont({
   src:[
     {
-      path:'../../public/Fonts/LibreBaskerville-Regular.ttf',
+      path:'../../../public/Fonts/LibreBaskerville-Regular.ttf',
       weight: "400",
     },
   ],
