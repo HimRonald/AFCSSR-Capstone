@@ -17,6 +17,8 @@ const badgeVariants = cva(
         outline: "text-foreground",
         news: "border border-[#027AC6] text-[#027AC6] font-libre py-2 px-8",
         news_card: "text-white font-libre py-2 px-6",
+        scholarships: "border border-[#027AC6] text-[#027AC6] font-libre py-2 px-8",
+        scholarship_card: "text-white font-libre py-2 px-6",
         date: "bg-[#D9D9D9] ",
       },
     },
