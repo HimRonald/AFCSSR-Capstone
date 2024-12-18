@@ -57,7 +57,7 @@ export default function Navbar() {
           <Link href='/scholarships' className={`font-semibold text-base ${isActive('/scholarships') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>SCHOLARSHIPS</Link>
           <Link href='/News&Events' className={`font-semibold text-base ${isActive('/News&Events') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>NEWS & EVENTS</Link>
           <Link href='/Contact' className={`font-semibold text-base ${isActive('/Contact') ? 'text-[#027AC6] underline underline-offset-[5px]' : 'text-[#4F4A5C]'} hover:text-[#027AC6] link-underline link-underline-black`}>CONTACT</Link>
-          <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
+          {/* <Button variant="btn_navbar" size="size_nav">Membership Login</Button> */}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -91,7 +91,7 @@ export default function Navbar() {
               <Link href='/scholarships' className={`font-semibold text-base ${isActive('/scholarships') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>SCHOLARSHIPS</Link>
               <Link href='/News&Events' className={`font-semibold text-base ${isActive('/News&Events') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>NEWS & EVENTS</Link>
               <Link href='/Contact' className={`font-semibold text-base ${isActive('/Contact') ? 'text-[#027AC6] underline' : 'text-[#4F4A5C]'} hover:text-[#027AC6] hover:underline underline-offset-4`}>CONTACT</Link>
-              <Button variant="btn_navbar" size="size_nav">Membership Login</Button>
+              {/* <Button variant="btn_navbar" size="size_nav">Membership Login</Button> */}
             </div>
           </SheetContent>
         </Sheet>
