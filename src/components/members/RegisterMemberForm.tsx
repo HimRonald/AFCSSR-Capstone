@@ -23,8 +23,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Input, InputControl } from "@/components/ui/input";
-import { FileInput } from "flowbite-react";
+import { Input } from "@/components/ui/input";
 
 import createMember from "@/firebase/firestore/members/createMember";
 import uploadImage from "@/firebase/storage/uploadImage";
