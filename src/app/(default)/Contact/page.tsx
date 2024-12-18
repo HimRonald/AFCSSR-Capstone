@@ -1,7 +1,10 @@
-"use client";
+"use client"
 
+import { useState } from "react";
+import { toast } from "react-toastify";
+import createMessage from "@/firebase/firestore/messages/createMessage";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import {
@@ -15,12 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 import { Map } from "./map";
-import { useState } from "react";
 import UserCard from "./card";
-
-import { toast } from "react-toastify";
-
-import createMessage from "@/firebase/firestore/messages/createMessage";
 
 const FormSchema = z.object({
   first_name: z.string({
@@ -64,7 +62,6 @@ export default function Page() {
       await createMessage(data);
       setLoading(false);
       form.reset();
-
       toast.success("Message has been sent!");
     } catch (error) {
       console.log(error);
@@ -74,69 +71,84 @@ export default function Page() {
 
   const users = [
     {
-      name: "HANG RITHRATANA",
-      title: "General Secretariat of AFCSSR",
-      image: "/Images/profile/Ratana.jpg",
+      name: "SOR Seileang",
+      title: "Treasurer & Chairman Assistant",
+      image: "/Images/ACSSR-Member-Pics/Membership of Executive Committee  /SOR Seileang .jpg",
+      phone: "+885 77 983 698",
     },
     {
-      name: "HIM DALIM RONALD",
-      title: "General Secretariat of AFCSSR",
-      image: "/Images/profile/Ronald.jpg",
+      name: "NORNG Rithy",
+      title: "Secretary of Executive Committee",
+      image: "/Images/NORNGRITHY.JPEG",
+      phone: "+885 70 321 481",
     },
     {
-      name: "HENG TRAMIT",
-      title: "General Secretariat of AFCSSR",
-      image: "/Images/profile/tramit.jpg",
-    },
-    {
-      name: "VUTH WATNAKPISETH",
-      title: "General Secretariat of AFCSSR",
-      image: "/Images/profile/Piseth.jpg",
-    },
-    {
-      name: "YOU CHANVICHEA",
-      title: "General Secretariat of AFCSSR",
-      image: "/Images/profile/Vichea.jpg",
+      name: "NHOUNG Manith",
+      title: "Member of Third Committee",
+      image: "/Images/ACSSR-Member-Pics/Third Committee/ញុង ម៉ានិត.jpg",
+      phone: "+885 12 303 748",
     },
   ];
 
   return (
     <div>
       <div className="h-32 bg-[#027AC6] justify-center flex flex-col items-center">
-        <span className="text-[40px] text-white font-libre font-semibold">
-          Contact
-        </span>
+        <span className="text-[40px] text-white font-libre font-semibold">Contact</span>
       </div>
       <div>
         <Map />
       </div>
 
-      <div className="my-[25px] mx-auto container">
-        <span className="font-semibold my-10 font-libre text-[30px]">
-          VISIT US
-        </span>
-      </div>
 
-      <div className="mt-[26px] mx-auto container">
-        <div className="text-[18px]">
-          <p className="font-semibold">Branch #1</p>
-          <p>
-            2nd Bridge, Prek Leap, National Road Number 6, Phnom Penh, Cambodia
-          </p>
+      <div className="my-[25px] mx-auto container">
+        <span className="font-semibold my-10 font-libre text-[30px]">VISIT US</span>
+
+        <div className="flex justify-between space-x-4 mt-10"> {/* Flex container for row layout */}
+
+          {/* Branch 1 */}
+          <div className="flex flex-col w-1/3">
+            <p className="font-semibold text-lg">Branch #1</p>
+            <p>Room 519, IU University Building Khan Sen Sok, 
+            Phnom Penh</p>
+            <button
+              type="button"
+              className="w-[162px] h-[60px] bg-[#027AC6] my-[15px] flex justify-center items-center rounded-xl"
+            >
+              <a
+                href="https://maps.app.goo.gl/pHZuH5oGkX9FvRC37"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="font-semibold text-white">Get Direction</span>
+              </a>
+            </button>
+          </div>
+
+          {/* Branch 2 */}
+          <div className="flex flex-col">
+            <p className="font-semibold text-lg">Branch #2</p>
+            <p>#23 F, Nat.5, Svay Pak District Khan Russei Keo, Phnom Penh</p>
+            <button
+              type="button"
+              className="w-[162px] h-[60px] bg-[#027AC6] my-[15px] flex justify-center items-center rounded-xl"
+            >
+              <a
+                href="https://maps.app.goo.gl/sa6E6x7LwakZRESv9?g_st=com.google.maps.preview.copy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="font-semibold text-white">Get Direction</span>
+              </a>
+            </button>
+          </div>
+
+          {/* Add more branches if needed */}
         </div>
-
-        <button
-          type="button"
-          className="w-[162px] h-[60px] bg-[#027AC6] my-[15px] flex flex-col justify-center items-center rounded-xl"
-        >
-          <span className="font-semibold text-white">Get Direction</span>
-        </button>
       </div>
 
+
       <div className="my-[25px] mx-auto container">
-        <span className="font-semibold my-10 font-libre text-[30px]">
-          CONTACT US
-        </span>
+        <span className="font-semibold my-10 font-libre text-[30px]">CONTACT US</span>
       </div>
       <div className="mx-auto container">
         <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -146,39 +158,25 @@ export default function Page() {
               name={user.name}
               title={user.title}
               image={user.image}
+              phone={user.phone} // Add phone to UserCard component
             />
           ))}
         </div>
-        <button
+        {/* <button
           onClick={() => setShowMore(!showMore)}
           className="mx-auto container text-gray-500"
         >
           {showMore ? "Show less" : "See more"}
-        </button>
+        </button> */}
       </div>
 
-      <div className="my-[25px] mx-auto container">
-        <span className="font-semibold my-10 font-libre text-[30px]">
-          SEND MESSAGES
-        </span>
+      <div className="my-[25px] mt-[25px] mx-auto container">
+        <span className="font-semibold my-10 font-libre text-[30px]">SEND MESSAGES</span>
       </div>
-      <div className="mx-auto container">
+      <div className="mx-auto my-[25px] container">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <div className="flex justify-between">
-              {/* <div className="flex flex-row">
-                <div className="flex flex-col">
-                  <label htmlFor="" className="font-semibold">
-                    First Name{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="first_name"
-                    className="w-[610px] h-[56px] rounded-xl mt-[7px]"
-                    onChange={handleChange}
-                  />
-                </div>
-              </div> */}
               <FormField
                 control={form.control}
                 name="first_name"
@@ -191,9 +189,6 @@ export default function Page() {
                         className="w-[610px] h-[56px] rounded-xl mt-[7px]"
                         placeholder="Enter first name"
                         {...field}
-                        onChange={(e) => {
-                          field.onChange(e);
-                        }}
                       />
                     </FormControl>
                     <FormMessage />
@@ -201,19 +196,6 @@ export default function Page() {
                 )}
               />
 
-              {/* <div>
-                <div className="ml-[60px] flex flex-col">
-                  <label htmlFor="" className="font-semibold">
-                    Email{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="email"
-                    className="w-[610px] h-[56px] rounded-xl mt-[7px]"
-                    onChange={handleChange}
-                  />
-                </div>
-              </div> */}
               <FormField
                 control={form.control}
                 name="email"
@@ -226,9 +208,6 @@ export default function Page() {
                         className="w-[610px] h-[56px] rounded-xl mt-[7px]"
                         placeholder="Enter email"
                         {...field}
-                        onChange={(e) => {
-                          field.onChange(e);
-                        }}
                       />
                     </FormControl>
                     <FormMessage />
@@ -237,20 +216,7 @@ export default function Page() {
               />
             </div>
 
-            <div className="flex mb-[25px]">
-              {/* <div className="flex flex-row">
-                <div className="flex flex-col">
-                  <label htmlFor="" className="font-semibold">
-                    Subject{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-[1280px] h-[56px] rounded-xl mt-[7px]"
-                    onChange={handleChange}
-                  />
-                </div>
-              </div> */}
+            <div className="flex mb-[25px] mt-[25px]">
               <FormField
                 control={form.control}
                 name="subject"
@@ -263,9 +229,6 @@ export default function Page() {
                         className="w-[1336px] h-[56px] rounded-xl mt-[7px]"
                         placeholder="Enter subject"
                         {...field}
-                        onChange={(e) => {
-                          field.onChange(e);
-                        }}
                       />
                     </FormControl>
                     <FormMessage />
@@ -275,19 +238,6 @@ export default function Page() {
             </div>
 
             <div className="flex mb-[25px]">
-              {/* <div className="flex flex-row">
-                <div className="flex flex-col">
-                  <label htmlFor="" className="font-semibold">
-                    Message{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="message"
-                    className="w-[1280px] h-[430px] rounded-xl mt-[7px]"
-                    // onChange={handleChange}
-                  />
-                </div>
-              </div> */}
               <FormField
                 control={form.control}
                 name="message"
@@ -300,9 +250,6 @@ export default function Page() {
                         className="w-[1336px] h-[430px] rounded-xl mt-[7px]"
                         placeholder="Enter message"
                         {...field}
-                        onChange={(e) => {
-                          field.onChange(e);
-                        }}
                       />
                     </FormControl>
                     <FormMessage />

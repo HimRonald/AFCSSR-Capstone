@@ -3,37 +3,19 @@
 import React, {useEffect} from "react";
 import { Loader } from '@googlemaps/js-api-loader';
 
-export function Map(){
-
-    const mapRef = React.useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-
-        const initMap = async () => {
-            const loader = new Loader({
-                apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY as string,
-            });
-
-            const { Map } = await loader.importLibrary('maps');
-
-            const position = {
-                lat: 11.6530651,
-                lng: 104.9091141
-            }
-
-            const mapOptions: google.maps.MapOptions = {
-                center: position,
-                zoom: 15,
-                mapId: 'MY_MAPID'
-            }
-
-            const map = new Map(mapRef.current as HTMLDivElement, mapOptions); 
-        }
-
-        initMap();
-    }, []);
-
-    return(
-        <div className="h-[510px]" ref={mapRef}></div>
-    )
+export function Map() {
+    return (
+        <div className="w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px]">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4808.325643824714!2d104.87428617505478!3d11.643388888563091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM4JzM2LjIiTiAxMDTCsDUyJzM2LjciRQ!5e1!3m2!1sen!2skh!4v1734499812942!5m2!1sen!2skh"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+            ></iframe>
+        </div>
+    );
 }
+

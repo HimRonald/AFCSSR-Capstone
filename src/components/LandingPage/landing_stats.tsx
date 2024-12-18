@@ -5,13 +5,13 @@ import Link from "next/link"
 export default function LandingStats(){
     return(
         <>
-        <div className="h-[820px] w-full bg-white flex flex-col items-center justify-center  ">
+        <div className="h-[820px] w-full bg-white flex flex-col items-center justify-center">
             <div className="text-[#4F4A5C] font-libre text-center mx-[290px] border-b-2 border-[#4F4A5C] mb-20">
                 <h1 className="text-4xl font-bold">The Association of Former Cambodian Students From Soviet Union and Russia</h1>
                 <span className=" text-xl font-medium">Solidarity, Humanity, Cooperation, and Development</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
+                <p></p>
                 <Button variant='link' className="mb-8" asChild>
-                    <Link href="/">Learn More</Link>    
+                    <Link href="/AboutUs">Learn More</Link>    
                 </Button>
             </div>
             <div>

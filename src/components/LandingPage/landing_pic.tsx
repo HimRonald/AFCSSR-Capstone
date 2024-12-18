@@ -3,17 +3,54 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+
 export default function LandingPic() {
     return (
         <div className="relative w-full overflow-hidden">
-            <img src="/Images/landing.png" alt="Landing page picture" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="relative py-24 mx-auto max-w-4xl text-center sm:px-6 lg:px-8 px-4">
-                <h2 className="font-bold md:text-8xl text-6xl font-libre text-[#F9EB1E]">AFCSSR</h2>
-                <p className="text-white text-5xl text-center font-libre tracking-wide mt-6 ">Membership Registration <br /> Now Open!</p>
-                <p className="text-white text-center text-base font-libre my-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, quos.</p>
-                <Button variant='btn_landing' size='size_landing' asChild>
-                    <Link href='/Membership/Registration'>Register Now</Link>
+            <Image
+                src="/Images/landing.png"
+                alt="Group photo with blue overlay"
+                layout="fill"
+                objectFit="cover"
+            />
+            <div className="absolute inset-0 bg-blue-600/10" /> {/* Blue overlay */}
+            <div className="relative py-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
+                <div className="max-w-3xl lg:mr-8">
+                    {/* <h1 className="font-libre text-[#F9EB1E] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Association Of Former Cambodian Students From Soviet Union And Russia
+                    </h1> */}
+                    <div className="leading-tight mx-auto max-w-[500px]">
+                        <h1 className="font-libre text-[#F9EB1E] text-2xl sm:text-3xl md:text-4xl font-bold">
+                            Association Of Former Cambodian Students From
+                            <br />
+                            Soviet Union And Russia
+                        </h1>
+                    </div>
+
+                    <Button variant='btn_navbar' size='size_nav' className="mt-8 bg-[#F9EB1E] text-blue-900 hover:bg-blue-900 px-8 py-3 " asChild>
+                    <Link href='/Contact'>contact</Link>
                 </Button>
+                    {/* <Button
+                        variant="default"
+                        size="lg"
+                        asChild
+                        className="mt-8 bg-[#F9EB1E] text-blue-900 hover:bg-[#F9EB1E]/90 px-8 py-3 rounded-md font-semibold"
+                    >
+                        <Link href='/AboutUs'>Learn More</Link>
+                    </Button> */}
+                </div>
+                <div className="lg:w-2/5">
+                    <div className="relative w-full" style={{ minWidth: '500px', maxWidth: '800px' }}>
+                        <Image
+                            src="/Images/soviet-flags-1.png"
+                            alt="Collection of national flags"
+                            width={1100}
+                            height={650}
+                            className="w-full h-auto"
+                            priority
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     )
