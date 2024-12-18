@@ -14,7 +14,7 @@ const UserCard: React.FC<UserCardProps> = ({ name, title, image }) => (
       <img
         src={image as string}
         alt={name}
-        className="h-[350px] w-full mb-4 object-cover relative rounded-t-xl"
+        className="h-[350px] w-full mb-4 object-cover object-top relative rounded-t-xl"
       />
       <div className="ml-4">
         <h2 className="text-xl font-semibold">{name}</h2>
