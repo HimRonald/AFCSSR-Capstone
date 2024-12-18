@@ -26,7 +26,7 @@ export default function SecondCommittee() {
             {
                 name: 'អ៊ុន សុីណេត',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/First Committee/ហេង រតនា.JPG'
+                image: '/Images/ACSSR-Member-Pics/Second Committee/un_sinet.jpg'
             }
         ]
     }
