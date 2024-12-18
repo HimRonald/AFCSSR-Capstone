@@ -5,23 +5,23 @@ export default function SecondCommittee() {
         chairman: {
             name: 'NOV Kimsan',
             title: 'Chairman',
-            image: '/Images/ACSSR-Member-Pics/Second Committee/NOV Kimsan.jpg'
+            image: '/Images/ACSSR-Member-Pics/Second Committee/nov_kimsan.jpg'
         },
         viceChairman: {
             name: 'រស់ សណ្ដាន',
             title: 'Vice Chairman',
-            image: '/Images/ACSSR-Member-Pics/Second Committee/រស់ សណ្ដាន់.png'
+            image: '/Images/ACSSR-Member-Pics/Second Committee/rous_sandan.png'
         },
         members: [
             {
                 name: 'ឃុន សេរីពន្លឺ',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/Second Committee/ឃុន សេរីពន្លឺ.png'
+                image: '/Images/ACSSR-Member-Pics/Second Committee/khun_sereypunleu.png'
             },
             {
                 name: 'NORNG Rithy',
                 title: 'Permanent Member',
-                image: '/Images/NORNGRITHY.JPEG'
+                image: '/Images/ACSSR-Member-Pics/Second Committee/norng_rithy.jpg'
             },
             {
                 name: 'អ៊ុន សុីណេត',

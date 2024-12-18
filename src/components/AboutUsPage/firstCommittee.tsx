@@ -5,33 +5,33 @@ export default function FirstCommittee() {
         chairman: {
             name: 'HO Chantha',
             title: 'Chairman',
-            image: '/Images/ACSSR-Member-Pics/First Committee/HO Chantha.jpg'
+            image: '/Images/ACSSR-Member-Pics/First Committee/ho_chantha.jpg'
         },
         viceChairman: {
-            name: 'កុល រដ្ឋាឭ',
+            name: 'កុល រដ្ឋា',
             title: 'Vice Chairman',
-            image: '/Images/ACSSR-Member-Pics/First Committee/កល រដ្ឋា.jpg'
+            image: '/Images/ACSSR-Member-Pics/First Committee/kol_ratha.jpg'
         },
         members: [
             {
                 name: 'SOR Seileang',
                 title: 'Permanent Member',
-                image: '/Images/ACSSR-Member-Pics/First Committee/SOR Seileang .jpg'
+                image: '/Images/ACSSR-Member-Pics/First Committee/sor_seileang.jpg'
             },
             {
                 name: 'ហេង រតនា',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/First Committee/ហេង រតនា.JPG'
+                image: '/Images/ACSSR-Member-Pics/First Committee/heng_rathana.jpg'
             },
             {
                 name: 'ធំ រ៉ាក់',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/First Committee/thom rak .jpg'
+                image: '/Images/ACSSR-Member-Pics/First Committee/thom_rak.jpg'
             },
             {
                 name: 'វង្ស សៀកលេង',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/First Committee/វង្ស សៀកលេង.jpg'
+                image: '/Images/ACSSR-Member-Pics/First Committee/vong_seakleng.jpg'
             }
         ]
     }

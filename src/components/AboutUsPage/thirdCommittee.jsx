@@ -5,28 +5,28 @@ export default function ThirdCommittee() {
         chairman: {
             name: 'HEAN Samboeun',
             title: 'Chairman',
-            image: '/Images/ACSSR-Member-Pics/Third Committee/HEAN Samboeun.jpg'
+            image: '/Images/ACSSR-Member-Pics/Third Committee/hean_samboeun.jpg'
         },
         viceChairman: {
             name: 'ចាន់ ផល្លី',
             title: 'Vice Chairman',
-            image: '/Images/ACSSR-Member-Pics/Third Committee/ចាន់ ផល្លី.jpg'
+            image: '/Images/ACSSR-Member-Pics/Third Committee/chan_phally.jpg'
         },
         members: [
             {
                 name: 'ញូង ម៉ានិត',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/Third Committee/ញុង ម៉ានិត.jpg'
+                image: '/Images/ACSSR-Member-Pics/Third Committee/nhoung_manith.jpg'
             },
             {
                 name: 'ផយ ម៉េងលីម',
                 title: 'Permanent Member',
-                image: '/Images/ACSSR-Member-Pics/Third Committee/ផយ ម៉េងលីម.jpg'
+                image: '/Images/ACSSR-Member-Pics/Third Committee/phoy_menglim.jpg'
             },
             {
                 name: 'រ៉េត សុផល',
                 title: 'Member',
-                image: '/Images/ACSSR-Member-Pics/Third Committee/រ៉េត សុផល.jpg'
+                image: '/Images/ACSSR-Member-Pics/Third Committee/reth_sophal.jpg'
             }
         ]
     }
