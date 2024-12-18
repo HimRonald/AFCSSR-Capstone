@@ -29,9 +29,8 @@ const libre = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AFCSSR Website",
+  title: "Association of Former Cambodian Students from Soviet Union and Russia - ACSSR",
 };
-
 
 export default function RootLayout({
   children,
@@ -40,6 +39,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${moul.variable} ${libre.variable}`}>
+      <head>
+          <link
+            rel="icon"
+            href="/images/afcssr-logo.svg"
+            type="image/svg"
+            sizes="32x32"
+          />
+        </head>
       <body className={inter.className}>
         <ToastContainer
           position="top-left"

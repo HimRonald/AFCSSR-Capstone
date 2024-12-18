@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import "../globals.css";
 
 import { Inter } from "next/font/google";
@@ -23,6 +24,11 @@ const libre = localFont({
   variable: "--font-libre",
 });
 
+export const metadata: Metadata = {
+  title: "Log In - ACSSR",
+  description: "Log in to the ACSSR website.",
+};
+
 export default async function AuthLayout({
   children,
 }: Readonly<{
@@ -30,6 +36,14 @@ export default async function AuthLayout({
 }>) {
   return (
     <html lang="en" className={`${moul.variable} ${libre.variable}`}>
+      <head>
+        <link
+          rel="icon"
+          href="/image/acssr-logo.png"
+          type="image/png"
+          sizes="32x32"
+        />
+      </head>
       <body className={inter.className}>
         <div className="min-w-screen bg-white flex m-0 h-screen">
           {children}
