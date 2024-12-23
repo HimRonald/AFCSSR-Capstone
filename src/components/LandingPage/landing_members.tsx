@@ -15,7 +15,7 @@ export default function LandingMembers() {
                 <div className="grid justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-5 mt-5">
                     <div className="grid grid-rows-3 grid-flow-col gap-4">
                         <div className="row-span-3">
-                            <img src="/Images/lay 2.jpg" alt="" className="object-cover rounded-xl" />
+                            <img src="/Images/lay2.png" alt="" className="object-cover rounded-xl" />
                         </div>
                         <div className="col-span-1 ">
                             <img src="/Images/lay3.png" alt="" className="object-cover rounded-xl" />

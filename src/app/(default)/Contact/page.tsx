@@ -73,7 +73,7 @@ export default function Page() {
     {
       name: "SOR Seileang",
       title: "Treasurer & Chairman Assistant",
-      image: "/Images/ACSSR-Member-Pics/Membership of Executive Committee  /SOR Seileang .jpg",
+      image: "/Images/ACSSR-Member-Pics/Membership of Executive Committee  /sor_seileang.jpg",
       phone: "+885 77 983 698",
     },
     {
@@ -85,7 +85,7 @@ export default function Page() {
     {
       name: "NHOUNG Manith",
       title: "Member of Third Committee",
-      image: "/Images/ACSSR-Member-Pics/Third Committee/ញុង ម៉ានិត.jpg",
+      image: "/Images/ACSSR-Member-Pics/Third Committee/nhoung_manith.jpg",
       phone: "+885 12 303 748",
     },
   ];
